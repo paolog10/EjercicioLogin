@@ -28,45 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            btnLogin = new Button();
+            btnLimpiar = new Button();
+            txtUsuario = new TextBox();
+            txtContrasenia = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
+            panel1 = new Panel();
             SuspendLayout();
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Location = new Point(84, 232);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.Location = new Point(95, 232);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(75, 23);
+            btnLogin.TabIndex = 0;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLimpiar
             // 
-            button2.Location = new Point(202, 232);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
+            btnLimpiar.Location = new Point(213, 232);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(75, 23);
+            btnLimpiar.TabIndex = 1;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(118, 147);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(207, 23);
-            textBox1.TabIndex = 2;
+            txtUsuario.AllowDrop = true;
+            txtUsuario.Location = new Point(118, 147);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(207, 23);
+            txtUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txtContrasenia
             // 
-            textBox2.Location = new Point(118, 176);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 23);
-            textBox2.TabIndex = 3;
+            txtContrasenia.Location = new Point(118, 176);
+            txtContrasenia.Name = "txtContrasenia";
+            txtContrasenia.PasswordChar = '*';
+            txtContrasenia.Size = new Size(207, 23);
+            txtContrasenia.TabIndex = 3;
             // 
             // label1
             // 
@@ -86,17 +91,36 @@
             label2.TabIndex = 5;
             label2.Text = "Contraseña: ";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 30F);
+            label3.Location = new Point(127, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(139, 54);
+            label3.TabIndex = 6;
+            label3.Text = "LOGIN";
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(39, 286);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(319, 100);
+            panel1.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(395, 461);
+            Controls.Add(panel1);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(txtContrasenia);
+            Controls.Add(txtUsuario);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnLogin);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginUsuarios";
@@ -106,11 +130,13 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button btnLogin;
+        private Button btnLimpiar;
+        private TextBox txtUsuario;
+        private TextBox txtContrasenia;
         private Label label1;
         private Label label2;
+        private Label label3;
+        private Panel panel1;
     }
 }
