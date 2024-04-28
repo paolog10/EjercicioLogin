@@ -7,19 +7,33 @@ namespace EjercicioLogin
         public Form1()
         {
             InitializeComponent();
-
-            Usuario usuario = new Usuario();
-            usuario.NombreUsuario=txtUsuario.Text;
-            usuario.Contrasenia=txtContrasenia.Text;
-
-            panel1.Show();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtUsuario.Clear();
             txtContrasenia.Clear();
-            panel1.ResetText();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario(txtUsuario.Text.Trim(), txtContrasenia.Text.Trim());
+
+            if (usuario.LoginUsuario())
+            {
+                MessageBox.Show("Usuario guardado correctamente");
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,7 +35,6 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            panel1 = new Panel();
             SuspendLayout();
             // 
             // btnLogin
@@ -46,6 +45,7 @@
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnLimpiar
             // 
@@ -101,19 +101,11 @@
             label3.TabIndex = 6;
             label3.Text = "LOGIN";
             // 
-            // panel1
-            // 
-            panel1.Location = new Point(39, 286);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(319, 100);
-            panel1.TabIndex = 8;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(395, 461);
-            Controls.Add(panel1);
+            ClientSize = new Size(395, 336);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -124,6 +116,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginUsuarios";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,6 +130,5 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Panel panel1;
     }
 }
